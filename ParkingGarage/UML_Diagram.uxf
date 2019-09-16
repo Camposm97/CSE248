@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>30</x>
+      <y>210</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Parking Attendent</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>220</x>
+      <y>170</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Check in/
+Check out
+customer's car</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>80</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;80.0;27.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>200</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Note:
+--
+Custmer is charged
+a flat fee per hour
+for parking.  
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>300</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Note:
+--
+Find a parking spot
+closest to the exit.  
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>390</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Note:
+--
+Motorcyles can park
+in spaces for trucks,
+but not vice versa.  
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>50</x>
+      <y>520</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Customer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>90</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Note:
+--
+Type of Vehicles:
+Car
+Truck
+Motorcycle
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>210</x>
+      <y>570</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Car Arriving/Leaving</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>570</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;100.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>70</x>
+      <y>80</y>
+      <w>80</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>210</x>
+      <y>80</y>
+      <w>160</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Manage Attendent's
+Accounts</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>220</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>170</x>
+      <y>50</y>
+      <w>591</w>
+      <h>431</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+&lt;Business&gt;
+Parking Garage</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines) {
+	y += printCenter(textline,y);
+}</custom_code>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>400</x>
+      <y>250</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Record Car's 
+Information and
+date arrived to
+database</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>200</y>
+      <w>110</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>60.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>330</y>
+      <w>70</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>50.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>440</x>
+      <y>370</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Issue Ticket to 
+Customer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>200</x>
+      <y>490</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Pays ticket when
+checking out 
+vehicle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>510</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>90.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>560</x>
+      <y>490</y>
+      <w>201</w>
+      <h>31</h>
+    </coordinates>
+    <panel_attributes>Michael Campos</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=textHeight();
+
+for(String textline : textlines) {
+	y += printCenter(textline,y);
+}</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>120</y>
+      <w>110</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;70.0</additional_attributes>
+  </element>
+</diagram>
