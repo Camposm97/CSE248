@@ -1,2 +1,2 @@
-#CSE248-FA19
+# CSE248
 Michael Campos
