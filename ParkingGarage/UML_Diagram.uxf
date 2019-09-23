@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>14</zoom_level>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>30</x>
-      <y>210</y>
-      <w>140</w>
-      <h>110</h>
+      <x>182</x>
+      <y>280</y>
+      <w>196</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>Parking Attendent</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>220</x>
-      <y>170</y>
-      <w>130</w>
-      <h>80</h>
+      <x>448</x>
+      <y>224</y>
+      <w>182</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Check in/
 Check out
@@ -28,10 +28,10 @@ customer's car</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>80</y>
-      <w>100</w>
-      <h>50</h>
+      <x>322</x>
+      <y>98</y>
+      <w>140</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;80.0;27.0</additional_attributes>
@@ -39,10 +39,10 @@ customer's car</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>610</x>
-      <y>200</y>
-      <w>140</w>
-      <h>80</h>
+      <x>994</x>
+      <y>266</y>
+      <w>196</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Note:
 --
@@ -55,10 +55,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>610</x>
-      <y>300</y>
-      <w>140</w>
-      <h>70</h>
+      <x>994</x>
+      <y>406</y>
+      <w>196</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>Note:
 --
@@ -70,10 +70,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>610</x>
-      <y>390</y>
-      <w>140</w>
-      <h>80</h>
+      <x>994</x>
+      <y>532</y>
+      <w>196</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Note:
 --
@@ -86,10 +86,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>50</x>
-      <y>520</y>
-      <w>80</w>
-      <h>120</h>
+      <x>210</x>
+      <y>714</y>
+      <w>112</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>Customer
 </panel_attributes>
@@ -98,10 +98,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>610</x>
-      <y>90</y>
-      <w>140</w>
-      <h>90</h>
+      <x>994</x>
+      <y>112</y>
+      <w>196</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Note:
 --
@@ -115,10 +115,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>210</x>
-      <y>570</y>
-      <w>140</w>
-      <h>70</h>
+      <x>434</x>
+      <y>784</y>
+      <w>196</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>Car Arriving/Leaving</panel_attributes>
     <additional_attributes/>
@@ -126,10 +126,10 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
-      <y>570</y>
-      <w>120</w>
-      <h>60</h>
+      <x>294</x>
+      <y>784</y>
+      <w>168</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;100.0;40.0</additional_attributes>
@@ -137,10 +137,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>70</x>
-      <y>80</y>
-      <w>80</w>
-      <h>110</h>
+      <x>238</x>
+      <y>98</y>
+      <w>112</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>Manager</panel_attributes>
     <additional_attributes/>
@@ -148,10 +148,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>210</x>
-      <y>80</y>
-      <w>160</w>
-      <h>60</h>
+      <x>434</x>
+      <y>98</y>
+      <w>224</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Manage Attendent's
 Accounts</panel_attributes>
@@ -160,10 +160,10 @@ Accounts</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
-      <y>220</y>
-      <w>120</w>
-      <h>50</h>
+      <x>308</x>
+      <y>294</y>
+      <w>168</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;30.0;100.0;10.0</additional_attributes>
@@ -171,10 +171,10 @@ Accounts</panel_attributes>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>170</x>
-      <y>50</y>
-      <w>591</w>
-      <h>431</h>
+      <x>378</x>
+      <y>56</y>
+      <w>827</w>
+      <h>603</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
@@ -200,10 +200,10 @@ for(String textline : textlines) {
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>400</x>
-      <y>250</y>
-      <w>130</w>
-      <h>90</h>
+      <x>700</x>
+      <y>336</y>
+      <w>182</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Record Car's 
 Information and
@@ -214,10 +214,10 @@ database</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>200</y>
-      <w>110</w>
-      <h>110</h>
+      <x>616</x>
+      <y>266</y>
+      <w>154</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
@@ -226,10 +226,10 @@ database</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>330</y>
-      <w>70</w>
-      <h>60</h>
+      <x>770</x>
+      <y>448</y>
+      <w>98</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
@@ -238,10 +238,10 @@ database</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>440</x>
-      <y>370</y>
-      <w>120</w>
-      <h>60</h>
+      <x>756</x>
+      <y>504</y>
+      <w>168</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Issue Ticket to 
 Customer</panel_attributes>
@@ -250,10 +250,10 @@ Customer</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>200</x>
-      <y>490</y>
-      <w>160</w>
-      <h>70</h>
+      <x>420</x>
+      <y>672</y>
+      <w>224</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>Pays ticket when
 checking out 
@@ -263,10 +263,10 @@ vehicle</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
-      <y>510</y>
-      <w>110</w>
-      <h>50</h>
+      <x>294</x>
+      <y>700</y>
+      <w>154</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>90.0;20.0;10.0;30.0</additional_attributes>
@@ -274,10 +274,10 @@ vehicle</panel_attributes>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>560</x>
-      <y>490</y>
-      <w>201</w>
-      <h>31</h>
+      <x>924</x>
+      <y>672</y>
+      <w>281</w>
+      <h>43</h>
     </coordinates>
     <panel_attributes>Michael Campos</panel_attributes>
     <additional_attributes/>
@@ -298,10 +298,10 @@ for(String textline : textlines) {
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>120</y>
-      <w>110</w>
-      <h>90</h>
+      <x>322</x>
+      <y>154</y>
+      <w>154</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
