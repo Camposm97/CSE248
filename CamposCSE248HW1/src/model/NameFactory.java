@@ -1,14 +1,15 @@
-package p1;
+package model;
+
+import static util.Util.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class NameFactory {
-	private static final String FIRST_NAMES_SRC = "First_Names.txt";
-	private static final String LAST_NAMES_SRC = "Last_Names.txt";
-	private LinkedList<String> firstNames, lastNames;
+	private List<String> firstNames, lastNames;
 	
 	public NameFactory() {
 		try {

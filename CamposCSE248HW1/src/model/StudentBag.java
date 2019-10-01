@@ -1,29 +1,19 @@
-package p1;
+package model;
 
-import java.util.Arrays;
+import java.util.HashMap;
 
 public class StudentBag {
-	private static final int SIZE = 2000;
-	private Student[] arr;
-	private int nElems;
+	private HashMap<String, Student> students;
 	
-	public StudentBag() {
-		this.arr = new Student[SIZE];
-		this.nElems = 0;
+	public StudentBag(int maxSize) {
+		students = new HashMap<>(maxSize);
 	}
 	
-	public void insert(Student s) {
-		arr[nElems++] = s;
-		Arrays.sort(arr);
+	public Student findById() {
+		return null;
 	}
 	
-	public double getAverageGpa() {
-		double averageGpa = 0;
-		int i;
-		for (i = 0; i < nElems; i++) {
-			averageGpa = arr[i].getGpa();
-		}
-		averageGpa /= i;
-		return  averageGpa;
+	public Student deleteById() {
+		return null;
 	}
 }

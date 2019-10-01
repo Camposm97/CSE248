@@ -1,4 +1,6 @@
-package p1;
+package model;
+
+import static util.StudentUtil.*;
 
 public class Student {
 	private static int idNumber = 0;
@@ -11,7 +13,15 @@ public class Student {
 	
 	public Student() {
 		this.id = String.valueOf(idNumber++);
-		
+		this.firstName = nameFactory.emitFirstName();
+		this.lastName = nameFactory.emitLastName();
+		this.gpa = emitGPA();
+		this.username = emitUsername(this);
+		this.password = emitPassword(this);
+	}
+	
+	public String getId() {
+		return id;
 	}
 
 	public String getFirstName() {
@@ -38,9 +48,19 @@ public class Student {
 		this.gpa = gpa;
 	}
 
-	public String getId() {
-		return id;
+	public String getUsername() {
+		return username;
 	}
-	
-	
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
