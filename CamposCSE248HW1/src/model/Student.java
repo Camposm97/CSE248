@@ -11,6 +11,10 @@ public class Student {
 	private String username;
 	private String password;
 
+	public static String currentID() {
+		return String.valueOf(idNumber);
+	}
+	
 	public Student(String firstName, String lastName, double gpa, String username, String password) {
 		this.id = StringUtils.formatId(String.valueOf(idNumber++));
 		this.firstName = firstName;

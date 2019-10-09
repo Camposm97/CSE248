@@ -1,23 +1,25 @@
 package app;
 
 import javafx.application.Application;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.StudentBag;
+import view.StudentPane;
 
 public class Demo extends Application {
 	private static final int MAX_SIZE = 4000;
-	private StudentBag studentBag;
-	private BorderPane root;
+	private StudentBag bag;
+	private StudentPane root;
 	
 	@Override
 	public void init() {
-		studentBag = new StudentBag(MAX_SIZE);
-		root = new BorderPane();
+		bag = new StudentBag(MAX_SIZE);
+		root = new StudentPane(bag);
 	}
 	
 	@Override
 	public void start(Stage stage) {
+		stage.setScene(new Scene(root));
 		stage.show();
 	}
 	

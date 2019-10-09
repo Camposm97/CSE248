@@ -4,19 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentBag {
-	private HashMap<StudentKey, Student> studentMap;
+	private HashMap<String, Student> studentMap;
 	
 	public StudentBag(int maxSize) {
 		studentMap = new HashMap<>(maxSize);
 	}
 	
 	public void insert(Student s) {
-		studentMap.put(s.getKey(), s);
+		studentMap.put(s.getId(), s);
 	}
 	
 	public Student findById(String id) {
-		StudentKey key = new StudentKey(id, null);
-		Student s = studentMap.get(key);
+//		StudentKey key = new StudentKey(id, null);
+		Student s = studentMap.get(id);
 		return s;
 	}
 	
@@ -27,22 +27,24 @@ public class StudentBag {
 	}
 	
 	public Student deleteById(String id) {
-		StudentKey key = new StudentKey(id, null);
-		Student s = studentMap.remove(key);
+//		StudentKey key = new StudentKey(id, null);
+		Student s = studentMap.remove(id);
 		return s;
 	}
 	
 	public Student deleteByLastName(String lastName) {
-		StudentKey key = new StudentKey(null, lastName);
+//		StudentKey key = new StudentKey(null, lastName);
 		Student s = studentMap.remove(key);
 		return s;
 	}
 	
 	public double getAverageGpa() {
 		double averageGpa = 0;
-		for (Map.Entry<StudentKey, Student> entry : studentMap.entrySet()) {
+		int count = 0;
+		for (Map.Entry<String, Student> entry : studentMap.entrySet()) {
 			averageGpa += entry.getValue().getGpa();
+			count++;
 		}
-		return averageGpa;
+		return averageGpa / count;
 	}
 }
