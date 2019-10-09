@@ -1,5 +1,7 @@
 package model;
 
+import util.StringUtils;
+
 public class Student {
 	private static int idNumber = 0;
 	private String id;
@@ -8,16 +10,16 @@ public class Student {
 	private double gpa;
 	private String username;
 	private String password;
-	
+
 	public Student(String firstName, String lastName, double gpa, String username, String password) {
-		this.id = String.valueOf(idNumber++);
+		this.id = StringUtils.formatId(String.valueOf(idNumber++));
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gpa = gpa;
 		this.username = username;
 		this.password = password;
 	}
-	
+
 	public String getId() {
 		return id;
 	}
@@ -60,5 +62,15 @@ public class Student {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public StudentKey getKey() {
+		return new StudentKey(id, lastName);
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gpa=" + gpa
+				+ ", username=" + username + ", password=" + password + "]";
 	}
 }

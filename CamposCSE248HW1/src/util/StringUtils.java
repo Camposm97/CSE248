@@ -1,6 +1,14 @@
 package util;
 
 public class StringUtils {
+	public static String formatId(String id) {
+		final int ID_LENGTH = 8;
+		for (int i = id.length(); i < ID_LENGTH; i++) {
+			id = "0" + id;
+		}
+		return id;
+	}
+	
 	public static String emitUsername(String firstName, String lastName, String id) {
 		String username = "";
 		if (isFourChar(lastName))
