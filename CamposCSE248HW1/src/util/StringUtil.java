@@ -1,12 +1,24 @@
 package util;
 
-public class StringUtils {
+import model.Student;
+
+public class StringUtil {
 	public static String formatId(String id) {
 		final int ID_LENGTH = 8;
 		for (int i = id.length(); i < ID_LENGTH; i++) {
 			id = "0" + id;
 		}
 		return id;
+	}
+	
+	public static String formatStudent(Student s) {
+		String str = "ID: " + s.getId() + "\n";
+		str += "First Name: " + s.getFirstName() + "\n";
+		str += "Last Name: " + s.getLastName() + "\n";
+		str += "GPA: " + s.getGpa() + "\n";
+		str += "Username: " + s.getUsername() + "\n";
+		str += "Password: " + s.getPassword() + "\n";
+		return str;
 	}
 	
 	public static String emitUsername(String firstName, String lastName, String id) {

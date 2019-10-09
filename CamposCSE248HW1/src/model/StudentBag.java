@@ -4,47 +4,55 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentBag {
-	private HashMap<String, Student> studentMap;
+	private double totalGpa;
+	private HashMap<String, Student> idMap;
+	private HashMap<String, Student> lastNameMap;
 	
 	public StudentBag(int maxSize) {
-		studentMap = new HashMap<>(maxSize);
+		this.totalGpa = 0;
+		idMap = new HashMap<>(maxSize);
+		lastNameMap = new HashMap<>(maxSize);
 	}
 	
 	public void insert(Student s) {
-		studentMap.put(s.getId(), s);
+		idMap.put(s.getId(), s);
+		lastNameMap.put(s.getLastName(), s);
+		totalGpa += s.getGpa();
 	}
 	
 	public Student findById(String id) {
-//		StudentKey key = new StudentKey(id, null);
-		Student s = studentMap.get(id);
+		Student s = idMap.get(id);
 		return s;
 	}
 	
 	public Student findByLastName(String lastName) {
-		StudentKey key = new StudentKey(null, lastName);
-		Student s = studentMap.get(key);
+		Student s = lastNameMap.get(lastName);
 		return s;
 	}
 	
 	public Student deleteById(String id) {
-//		StudentKey key = new StudentKey(id, null);
-		Student s = studentMap.remove(id);
+		Student s = idMap.remove(id);
+		if (s != null) {
+			lastNameMap.remove(s.getLastName());
+			totalGpa -= s.getGpa();
+		}
 		return s;
 	}
 	
 	public Student deleteByLastName(String lastName) {
-//		StudentKey key = new StudentKey(null, lastName);
-		Student s = studentMap.remove(key);
+		Student s = lastNameMap.remove(lastName);
+		if (s != null) {
+			idMap.remove(s.getId());
+			totalGpa -= s.getGpa();
+		}
 		return s;
 	}
 	
 	public double getAverageGpa() {
-		double averageGpa = 0;
-		int count = 0;
-		for (Map.Entry<String, Student> entry : studentMap.entrySet()) {
-			averageGpa += entry.getValue().getGpa();
-			count++;
-		}
-		return averageGpa / count;
+		return totalGpa / size();
+	}
+	
+	public int size() {
+		return (idMap.size() + lastNameMap.size()) / 2;
 	}
 }

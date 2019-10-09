@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.StudentBag;
+import util.Util;
 import view.StudentPane;
 
 public class Demo extends Application {
@@ -13,7 +14,7 @@ public class Demo extends Application {
 	
 	@Override
 	public void init() {
-		bag = new StudentBag(MAX_SIZE);
+		bag = Util.emitStudentBag(MAX_SIZE);
 		root = new StudentPane(bag);
 	}
 	

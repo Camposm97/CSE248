@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>220</y>
+      <w>400</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+-idNumber = 0: int
+-id: String
+-firstName: String
+-lastName: String
+-gpa: double
+-username: String
+-password: String
+--
++Student(String firstName, String lastName, double gpa): ctor
++currentID(): String
++getId(): String
++getFirstName(): String
++setFirstName(String firstName): void
++getLastName(): String
++setLastName(String lastName): void
++getGpa(): double
++setGpa(double gpa): void
++getUsername(): String
++getPassword(): String
++setPassword(String password): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>220</y>
+      <w>310</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>StudentBag
+--
+-idMap: HashMap&lt;String, Student&gt;
+-lastNameMap: HashMap&lt;String, Student&gt;
+--
++StudentBag(int maxSize): ctor
++insert(Student s): void
++findById(String id): Student
++findByLastName(String lastName): Student
++deleteById(String id): Student
++deleteByLastName(String lastName): Student
++getAverageGpa(): double
++size(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>700</y>
+      <w>440</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>util::StringUtil
+--
+--
++formatId(String id): String
++formatStudent(Student s): String
++emitUsername(String firstName, String lastName, String id): String
++emitPassword(String firstName, String lastName, String id): String
++isFourChar(String str): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>290</y>
+      <w>320</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+StudentBag has a bunch of Students</panel_attributes>
+    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>610</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+</diagram>

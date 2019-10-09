@@ -1,6 +1,6 @@
 package model;
 
-import util.StringUtils;
+import util.StringUtil;
 
 public class Student {
 	private static int idNumber = 0;
@@ -15,13 +15,13 @@ public class Student {
 		return String.valueOf(idNumber);
 	}
 	
-	public Student(String firstName, String lastName, double gpa, String username, String password) {
-		this.id = StringUtils.formatId(String.valueOf(idNumber++));
+	public Student(String firstName, String lastName, double gpa) {
+		this.id = StringUtil.formatId(String.valueOf(idNumber++));
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gpa = gpa;
-		this.username = username;
-		this.password = password;
+		this.username = StringUtil.emitUsername(firstName, lastName, id);
+		this.password = StringUtil.emitPassword(firstName, lastName, id);
 	}
 
 	public String getId() {
@@ -56,20 +56,12 @@ public class Student {
 		return username;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
 	public String getPassword() {
 		return password;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public StudentKey getKey() {
-		return new StudentKey(id, lastName);
 	}
 
 	@Override

@@ -1,7 +1,4 @@
-package util;
-
-import model.NameFactory;
-import model.Student;
+package model;
 
 public class StudentFactory {
 	private NameFactory nameFac;
@@ -14,9 +11,7 @@ public class StudentFactory {
 		String firstName= nameFac.emitFirstName();
 		String lastName = nameFac.emitLastName();
 		double gpa = emitGPA();
-		Student s = new Student(firstName, lastName, gpa, null, null);
-		s.setUsername(StringUtils.emitUsername(firstName, lastName, s.getId()));
-		s.setPassword(StringUtils.emitPassword(firstName, lastName, s.getId()));
+		Student s = new Student(firstName, lastName, gpa);
 		return s;
 	}
 	
