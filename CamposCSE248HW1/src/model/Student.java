@@ -1,7 +1,5 @@
 package model;
 
-import static util.StudentUtil.*;
-
 public class Student {
 	private static int idNumber = 0;
 	private String id;
@@ -11,13 +9,13 @@ public class Student {
 	private String username;
 	private String password;
 	
-	public Student() {
+	public Student(String firstName, String lastName, double gpa, String username, String password) {
 		this.id = String.valueOf(idNumber++);
-		this.firstName = nameFactory.emitFirstName();
-		this.lastName = nameFactory.emitLastName();
-		this.gpa = emitGPA();
-		this.username = emitUsername(this);
-		this.password = emitPassword(this);
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.gpa = gpa;
+		this.username = username;
+		this.password = password;
 	}
 	
 	public String getId() {

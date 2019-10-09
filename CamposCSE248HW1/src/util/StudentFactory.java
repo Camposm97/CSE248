@@ -7,7 +7,7 @@ public class StudentFactory {
 	private NameFactory nameFac;
 	
 	public StudentFactory() {
-		
+		nameFac = new NameFactory();
 	}
 	
 	public double emitGPA() {
