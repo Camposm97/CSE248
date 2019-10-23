@@ -1,6 +1,6 @@
-package p03_Design_Pattern_MVC.view;
+package p03_Design_Pattern_Model_View_Controller.view;
 
-import p03_Design_Pattern_MVC.model.Student;
+import p03_Design_Pattern_Model_View_Controller.model.Student;
 
 public class StudentView {
 	public void printStudentDetails(Student s) {

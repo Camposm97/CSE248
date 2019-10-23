@@ -1,7 +1,7 @@
-package p03_Design_Pattern_MVC.controller;
+package p03_Design_Pattern_Model_View_Controller.controller;
 
-import p03_Design_Pattern_MVC.model.Student;
-import p03_Design_Pattern_MVC.view.StudentView;
+import p03_Design_Pattern_Model_View_Controller.model.Student;
+import p03_Design_Pattern_Model_View_Controller.view.StudentView;
 
 public class StudentController {
 	private Student model;

@@ -1,4 +1,4 @@
-package p03_Design_Pattern_MVC.model;
+package p03_Design_Pattern_Model_View_Controller.model;
 
 public class Student { // Plain Old Java Objects (pojos)
 	private String id;
