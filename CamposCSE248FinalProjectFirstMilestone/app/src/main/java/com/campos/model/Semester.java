@@ -9,6 +9,13 @@ public class Semester {
         this.courseList = new LinkedList<>();
     }
 
+    public double getTotalCreditsTaking() {
+        double totalNumOfCredits = 0;
+        for (Course c : courseList)
+            totalNumOfCredits += c.getNumOfCredits();
+        return totalNumOfCredits;
+    }
+
     public LinkedList<Course> getCourseList() {
         return courseList;
     }
