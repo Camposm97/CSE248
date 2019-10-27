@@ -6,13 +6,10 @@ import android.os.Bundle;
 
 import com.campos.R;
 import com.campos.model.Course;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toolbar;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +18,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
-    private static final TreeMap<String, Course> COURSES = new TreeMap<>();
+    public static final TreeMap<String, Course> COURSES = new TreeMap<>();
     private static final String MY_GITHUB = "http://www.github.com/Camposm97";
 
     private void loadCourses() {
@@ -59,19 +56,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btSchedule).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity(ViewSchedule.class);
+                openActivity(ViewScheduleActivity.class);
             }
         });
         findViewById(R.id.btCreateSchedule).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity(CreateSchedule.class);
-            }
-        });
-        findViewById(R.id.btViewCourses).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity(ViewCoursesActivity.class);
+                openActivity(CreateScheduleActivity.class);
             }
         });
         findViewById(R.id.btGithub).setOnClickListener(new View.OnClickListener() {

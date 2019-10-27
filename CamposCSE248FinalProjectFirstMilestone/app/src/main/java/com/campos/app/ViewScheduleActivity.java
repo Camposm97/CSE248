@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.campos.R;
 
-public class ViewSchedule extends AppCompatActivity {
+public class ViewScheduleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

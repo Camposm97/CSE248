@@ -8,8 +8,7 @@ public class Schedule {
     private Date dateCreated;
     private LinkedList<Semester> semesterList;
 
-    public Schedule(String name) {
-        this.name = name;
+    public Schedule() {
         this.dateCreated = new Date();
         semesterList = new LinkedList<>();
     }

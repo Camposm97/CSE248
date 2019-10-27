@@ -41,7 +41,8 @@
             android:layout_marginBottom="20dp"
             android:padding="10dp"
             android:text="@string/view_courses"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
