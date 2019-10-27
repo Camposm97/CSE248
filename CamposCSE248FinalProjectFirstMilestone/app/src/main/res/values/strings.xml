@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">CamposCSE248FinalProjectFirstMilestone</string>
+    <string name="app_name">CamposCSE248FirstMileStone</string>
     <string name="action_settings">Settings</string>
+    <string name="view_my_schedule">View My Schedule</string>
+    <string name="create_new_schedule">Create New Schedule</string>
+    <string name="view_courses">View Courses</string>
+    <string name="title_activity_view_courses">View Courses</string>
 </resources>
