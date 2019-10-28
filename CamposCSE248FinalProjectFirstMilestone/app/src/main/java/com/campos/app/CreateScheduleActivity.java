@@ -57,14 +57,6 @@ public class CreateScheduleActivity extends AppCompatActivity {
                 openCreateSemesterActivity();
             }
         });
-//        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(CreateScheduleActivity.this, "clickItem:"
-//                        + schedule.getSemesterList().get(position).getName(), Toast.LENGTH_SHORT).show();
-//                return false;
-//            }
-//        });
         Toolbar toolbar = findViewById(R.id.toolBarCreateSchedule);
         setSupportActionBar(toolbar);
     }

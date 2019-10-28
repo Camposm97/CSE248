@@ -21,7 +21,7 @@
             android:padding="10dp"
             android:text="TextView"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -39,7 +39,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tvNumOfCredits"
@@ -48,7 +49,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvCourseDesc"
@@ -57,7 +59,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvPrereq"
@@ -66,7 +69,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvOfferedAt"
@@ -75,7 +79,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="18sp"/>
             </LinearLayout>
         </ScrollView>
 

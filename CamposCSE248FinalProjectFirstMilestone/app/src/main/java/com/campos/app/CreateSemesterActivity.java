@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -119,10 +121,38 @@ public class CreateSemesterActivity extends AppCompatActivity {
     public void addCourseToView(String courseNumber) {
         Log.println(Log.ASSERT, "0", "User Picked: " + courseNumber);
         Semester sem = CurrentSemester.getCurrent();
-        LinkedList<Course> courseList = sem.getCourseList();
+        final LinkedList<Course> courseList = sem.getCourseList();
         courseList.add(MainActivity.COURSES.get(courseNumber));
         List<String> list = Util.emitCourseList(courseList);
+        final ListView lvCourses = findViewById(R.id.lvCourses);
+        ArrayAdapter<String> arrAdapter;
+        arrAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
+        lvCourses.setAdapter(arrAdapter);
+        lvCourses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                openViewCourseActivity(courseList.get(position));
+            }
+        });
+        lvCourses.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                courseList.remove(courseList.get(position));
+                updateLvCourses(courseList);
+                return true;
+            }
+        });
+    }
+
+    public void openViewCourseActivity(Course c) {
+        Intent intent = new Intent(this, CourseDetailsActivity.class);
+        intent.putExtra("COURSE_NUMBER", c.getCourseNumber());
+        startActivity(intent);
+    }
+
+    public void updateLvCourses(LinkedList<Course> courseList) {
         ListView lvCourses = findViewById(R.id.lvCourses);
+        List<String> list = Util.emitCourseList(courseList);
         ArrayAdapter<String> arrAdapter;
         arrAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         lvCourses.setAdapter(arrAdapter);

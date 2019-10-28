@@ -8,7 +8,11 @@ import com.campos.R;
 import com.campos.model.Course;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.io.IOException;
@@ -73,6 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 openMyGithub();
             }
         });
+        Toolbar toolbar = findViewById(R.id.tb_Main);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.menu_github:
+                openMyGithub();
+                break;
+        }
+        return true;
     }
 
     private void openActivity(Class c) {

@@ -24,7 +24,7 @@
                 android:padding="10dp"
                 android:text="@string/schedule_placeholder"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ListView
                 android:id="@+id/lvSemesterDetails"

@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="@string/view_my_schedule"
-            android:textSize="24sp" />
+            android:text="@string/view_my_schedules"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btCreateSchedule"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="@string/create_new_schedule"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btViewCourses"
@@ -41,7 +41,7 @@
             android:layout_marginBottom="20dp"
             android:padding="10dp"
             android:text="@string/view_courses"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:visibility="invisible" />
 
     </LinearLayout>
