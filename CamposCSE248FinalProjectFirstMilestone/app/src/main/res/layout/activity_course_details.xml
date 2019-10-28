@@ -15,6 +15,7 @@
             android:id="@+id/tvCourseNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:background="#009688"
             android:gravity="center"
             android:padding="10dp"
@@ -35,30 +36,45 @@
                     android:id="@+id/tvCourseTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvNumOfCredits"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvCourseDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvPrereq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvOfferedAt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="TextView" />
             </LinearLayout>
         </ScrollView>
