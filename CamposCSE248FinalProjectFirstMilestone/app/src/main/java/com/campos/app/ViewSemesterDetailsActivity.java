@@ -35,7 +35,7 @@ public class ViewSemesterDetailsActivity extends AppCompatActivity {
     public void initControls() {
         TextView tvSemesterName = findViewById(R.id.tvSemesterName);
         tvSemesterName.setText(sem.getName() + " | Credits Taking: " + sem.getTotalCreditsTaking());
-        ListView lvCourses = findViewById(R.id.lvSemesterDetails);
+        ListView lvCourses = findViewById(R.id.lvCourseDetails);
         LinkedList<String> list = new LinkedList<>();
         for (Course c : sem.getCourseList()) {
             list.add(c.getCourseNumber());
@@ -52,7 +52,7 @@ public class ViewSemesterDetailsActivity extends AppCompatActivity {
     }
 
     public void viewCourseDetails(Course c) {
-        Intent intent = new Intent(this, null);
+        Intent intent = new Intent(this, CourseDetailsActivity.class);
         intent.putExtra("COURSE_NUMBER", c.getCourseNumber());
         startActivity(intent);
     }
