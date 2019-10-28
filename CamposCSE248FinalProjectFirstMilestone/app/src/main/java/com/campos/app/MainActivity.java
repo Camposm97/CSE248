@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 double numOfCredits = Double.valueOf(in.nextLine());
                 in.nextLine();
 //                Log.println(Log.ASSERT, "0", courseNum + ", " + courseTitle + ", " + courseDesc + ", " + prereq + ", " + offerAt + ", " + numOfCredits);
+                prereq = prereq.substring(14, prereq.length() - 3);
+//                Log.println(Log.ASSERT, "0", prereq);
                 Course c = new Course(courseNum, courseTitle, courseDesc, prereq, offerAt, numOfCredits);
                 COURSES.put(c.getCourseNumber(), c);
             }
@@ -49,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         loadCourses();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initBtns();
+        initControls();
     }
 
-    public void initBtns() {
+    public void initControls() {
         findViewById(R.id.btSchedule).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,15 +84,4 @@ public class MainActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         startActivity(intent);
     }
-
-//    private void loadSpinnerItems(Spinner sp1) {
-//        Set<String> keySet = COURSES.keySet();
-//        LinkedList<String> list = new LinkedList<>();
-//        for (String s : keySet) {
-//            list.add(s + " - " + COURSES.get(s).getCourseTitle());
-//        }
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
-//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        sp1.setAdapter(arrayAdapter);
-//    }
 }

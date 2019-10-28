@@ -17,6 +17,10 @@ public class Schedule {
         return name;
     }
 
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
