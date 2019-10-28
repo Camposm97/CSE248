@@ -22,7 +22,7 @@
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar1"
+                    android:id="@+id/toolBarCreateSchedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?attr/colorPrimary"
@@ -35,32 +35,31 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <Spinner
-                        android:id="@+id/spSeason"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" />
-
-                    <EditText
-                        android:id="@+id/yearPicker"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="number" />
+                        android:hint="Name of Schedule">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tilScheName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <ListView
-                    android:id="@+id/listView"
+                    android:id="@+id/lvSemesters"
                     android:layout_width="match_parent"
-                    android:layout_height="675dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="0dp">
 
                 </ListView>
             </LinearLayout>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabAddSemester"
+                android:id="@+id/fabAddSem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

@@ -5,4 +5,6 @@
     <string name="create_new_schedule">Create New Schedule</string>
     <string name="view_courses">View Courses</string>
     <string name="title_activity_view_courses">View Courses</string>
+    <string name="schedule_placeholder">Placeholder for Name of Schedule</string>
+    <string name="semester_placeholder">Placeholder for Name of Semester</string>
 </resources>

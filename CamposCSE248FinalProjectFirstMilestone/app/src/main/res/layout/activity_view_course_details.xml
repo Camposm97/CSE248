@@ -4,15 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.ViewScheduleActivity">
+    tools:context=".app.ViewCourseDetailsActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ListView
-            android:id="@+id/lvSchedules"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.campos.R;
 
-public class CreateSemester extends AppCompatActivity {
+public class ViewCourseDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_semester);
+        setContentView(R.layout.activity_view_course_details);
     }
 }

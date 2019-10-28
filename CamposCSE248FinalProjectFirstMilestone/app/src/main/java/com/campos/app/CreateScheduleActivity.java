@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.campos.R;
@@ -20,13 +19,10 @@ import com.campos.model.CurrentSchedule;
 import com.campos.model.CurrentSemester;
 import com.campos.model.Schedule;
 import com.campos.model.ScheduleList;
-import com.campos.model.Season;
 import com.campos.model.Semester;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 
 public class CreateScheduleActivity extends AppCompatActivity {
@@ -45,28 +41,20 @@ public class CreateScheduleActivity extends AppCompatActivity {
     }
 
     public void initControls() {
-        Spinner sp = findViewById(R.id.spSeason);
-        ArrayList<String> list = new ArrayList<String>();
-        for (Season s : Season.values()) {
-            list.add(s.toString());
-        }
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, list);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp.setAdapter(arrayAdapter);
-        FloatingActionButton fab = findViewById(R.id.fabAddSemester);
+        FloatingActionButton fab = findViewById(R.id.fabAddSem);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createSemester();
             }
         });
-        ListView lv = findViewById(R.id.listView);
+        ListView lv = findViewById(R.id.lvSemesters);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Semester s = schedule.getSemesterList().get(position);
                 CurrentSemester.setCurrent(s);
-                openActivity();
+                openCreateSemesterActivity();
             }
         });
 //        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -77,35 +65,37 @@ public class CreateScheduleActivity extends AppCompatActivity {
 //                return false;
 //            }
 //        });
-        Toolbar toolbar = findViewById(R.id.toolbar1);
+        Toolbar toolbar = findViewById(R.id.toolBarCreateSchedule);
         setSupportActionBar(toolbar);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater mi = getMenuInflater();
-        mi.inflate(R.menu.create_schedule_menu, menu);
+        mi.inflate(R.menu.create_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.action_Done:
+            case R.id.menu_done:
                 closeActivity();
                 break;
         }
         return true;
     }
 
-    private void openActivity() {
-        Intent intent = new Intent(this, CreateSemester.class);
+    private void openCreateSemesterActivity() {
+        Intent intent = new Intent(this, CreateSemesterActivity.class);
         startActivity(intent);
     }
 
     private void closeActivity() {
+        TextInputEditText til = findViewById(R.id.tilScheName);
+        schedule.setName(til.getText().toString());
         ScheduleList.getList().add(schedule);
-        super.finish();
+        finish();
     }
 
     private void createSemester() {
@@ -117,7 +107,7 @@ public class CreateScheduleActivity extends AppCompatActivity {
         }
         ArrayAdapter<String> arrayAdapter;
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
-        ListView lv = findViewById(R.id.listView);
+        ListView lv = findViewById(R.id.lvSemesters);
         lv.setAdapter(arrayAdapter);
         Toast.makeText(CreateScheduleActivity.this, "Created Semester!", Toast.LENGTH_SHORT).show();
     }
