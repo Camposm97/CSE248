@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.StudentBag;
+import netscape.javascript.JSObject;
 import util.Util;
 import view.StudentPane;
 
