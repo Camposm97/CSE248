@@ -11,9 +11,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Demo {
-	private static final String QUERY = "https://api.data.gov/ed/collegescorecard/v1/schools.json?&school.degrees_awarded.predominant=2,3&"
-			+ "fields=id,school.name,school.city,school.state,school.zip,school.school_url,latest.student.size&"
-			+ "api_key=eymRFR4vdKAgPCK3JIw9Es42ytaEelgZf43H5TKc&_per_page=100&_zip=11784&_distance=10";
+	private static final String QUERY = "https://api.data.gov/ed/collegescorecard/v1/schools.json?&school.degrees_awarded.predominant=2,3&fields=id,school.name,school.city,school.state,school.zip,school.school_url,latest.student.size&api_key=eymRFR4vdKAgPCK3JIw9Es42ytaEelgZf43H5TKc&_per_page=100&_zip=11784&_distance=10";
 	private static final int VALID_RESPONSE_CODE = 200;
 
 	public static void main(String[] args) throws Exception {

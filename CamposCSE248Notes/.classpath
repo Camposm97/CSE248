@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="C:/Users/Darkp/Downloads/jackson-annotations-2.10.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Darkp/Downloads/jackson-databind-2.10.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Darkp/Downloads/jackson-core-2.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Darkp/Downloads/sqlite-jdbc-3.27.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
