@@ -1,4 +1,4 @@
-package p11_Multithreading.p6_Synchronization;
+package p11_Multithreading.p06_Synchronization_Methods;
 
 public class Demo {
 	private int count;
@@ -26,7 +26,7 @@ public class Demo {
 		System.out.println("The count is " + count);
 	}
 	
-	private synchronized void increment() {
+	private synchronized void increment() { // This method can only be accessed one thread at a time.
 		count++;
 	}
 }

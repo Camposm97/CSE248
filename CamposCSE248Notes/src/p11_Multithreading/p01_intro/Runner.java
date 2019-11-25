@@ -1,4 +1,4 @@
-package p11_Multithreading.p1_intro;
+package p11_Multithreading.p01_intro;
 
 public class Runner {
 	public void run() {

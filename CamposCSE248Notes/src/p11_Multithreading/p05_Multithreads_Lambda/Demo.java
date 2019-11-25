@@ -1,4 +1,4 @@
-package p11_Multithreading.p5_Multithreads_V4;
+package p11_Multithreading.p05_Multithreads_Lambda;
 
 public class Demo {
 

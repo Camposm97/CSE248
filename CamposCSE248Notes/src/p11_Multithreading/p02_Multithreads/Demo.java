@@ -1,4 +1,4 @@
-package p11_Multithreading.p2_Multithreads;
+package p11_Multithreading.p02_Multithreads;
 
 public class Demo {
 	public static void main(String[] args) {

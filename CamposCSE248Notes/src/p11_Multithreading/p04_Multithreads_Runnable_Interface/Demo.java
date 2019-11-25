@@ -1,6 +1,4 @@
-package p11_Multithreading.p4_Multithreads_V3;
-
-import javafx.application.Platform;
+package p11_Multithreading.p04_Multithreads_Runnable_Interface;
 
 public class Demo {
 

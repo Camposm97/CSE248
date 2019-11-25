@@ -1,4 +1,4 @@
-package p11_Multithreading.p3_Multithreads_V2;
+package p11_Multithreading.p03_Multithreads_Runnable;
 
 public class Runner implements Runnable {
 	@Override

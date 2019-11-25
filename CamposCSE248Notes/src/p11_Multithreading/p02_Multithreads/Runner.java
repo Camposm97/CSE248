@@ -1,4 +1,4 @@
-package p11_Multithreading.p2_Multithreads;
+package p11_Multithreading.p02_Multithreads;
 
 public class Runner extends Thread {
 	public void run() {
