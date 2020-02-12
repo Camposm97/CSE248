@@ -26,6 +26,6 @@ public class Student extends Observable {
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
 		this.setChanged();
-		this.notifyObservers("Hi");
+		this.notifyObservers("Gpa Changed");
 	}
 }
